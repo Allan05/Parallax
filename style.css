@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,h2{
+    font-weight: 800;
+    color: rgb(77, 71, 17);
+}
+
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+main{
+    display: block;
+    background: rgb(138, 90, 228);
+}
+
+.container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 30px;
+    animation: surgir 3s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0 cover 40%;
+}
+
+section.modulo p{
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+section.modulo h2{
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+section.modulo.content{
+    padding: 40px 0;
+    background: rgb(182, 138, 223);
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h1{
+    color: #fff;
+    text-align: center;
+    font-size: 70px;
+    text-transform: uppercase;
+    text-shadow: 10px 10px 10px black;
+    z-index: 50;
+}
+
+section.modulo.parallax::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;z-index: 8;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
+}
+
+
+
+
+
+
+
+
+section.modulo.parallax-1{
+    background-image: url(https://img.elo7.com.br/product/zoom/268423E/painel-adesivo-cappuccino-cafe-expresso-leite-p-comercio-hd-parede.jpg);
+}
+section.modulo.parallax-2{
+    background-image: url(https://www.sabornamesa.com.br/media/k2/items/cache/98401d211546397e2b8c04cfd4ec5a4d_XL.jpg);
+}
+section.modulo.parallax-3{
+    background-image: url(https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?);
+}
+
+@keyframes surgir{
+    from{
+        translate: -100vw 0;
+        color: blueviolet;
+        opacity: 0;
+}
+
+    to{
+        translate: 0 0;
+        color: darkred;
+        opacity: 1;
+}
+
+}
+@media all and (max-width: 760px){
+
+    section.modulo p{
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    section.modulo.parallax h1{
+        color: aquamarine;
+        text-align: center;
+        font-size: 70px;
+        text-transform: uppercase;
+        text-shadow: 7px 7px 7px black;
+        z-index: 50;
+    }
+
+    section.modulo.content{
+        width: 90%;
+    }
+}
+
+footer{
+    color: aqua;
+    background-color: black;
+}
